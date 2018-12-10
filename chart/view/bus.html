@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="zh-cn">
+ <head> 
+  <title>秋名车神</title> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="renderer" content="webkit"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta name="keywords" content="五菱宏光上秋名"> 
+  <meta name="description" content="秋名山上行人稀,常有车手较高低,如今车道依旧在,不见当年老司机"> 
+  <link rel="shortcut icon" href="/zone/static/images/favicon.ico"> 
+  <link rel="stylesheet" href="/zone/plugins/bootstrap/bootstrap.min.css"> 
+  <link rel="stylesheet" href="/zone/plugins/font-awesome/css/font-awesome.css"> 
+  <script type="text/javascript">var ctx = '/zone';</script> 
+  <script type="text/javascript" src="/zone/plugins/jquery/jquery.min.js"></script> 
+  <script type="text/javascript" src="/zone/plugins/bootstrap/bootstrap.min.js"></script> 
+  <script type="text/javascript" src="/zone/plugins/layer/layer.js"></script> 
+  <style>
+::-webkit-scrollbar {
+	width: 8px; 
+	height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 8px;
+	-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+	background: #95B8E7;
+}
+
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+	border-radius: 8px;
+	background: #EDEDED;
+}
+</style> 
+  <script type="text/javascript" src="/zone/plugins/chart/echarts.min.js"></script> 
+  <link rel="stylesheet" href="/zone/plugins/chart/zcharts.view.css"> 
+  <script type="text/javascript" src="/zone/plugins/chart/zcharts.view.js"></script> 
+  <script type="text/javascript" src="/zone/plugins/laydate/laydate.js"></script> 
+  <script type="text/javascript" src="/zone/plugins/jquery/imagesloaded.pkgd.min.js"></script> 
+  <script type="text/javascript" src="/zone/plugins/jquery/masonry.pkgd.min.js"></script> 
+  <link rel="stylesheet" href="/zone/plugins/viewer/viewer.min.css"> 
+  <script type="text/javascript" src="/zone/plugins/viewer/viewer.min.js"></script> 
+  <style>nav{text-align:center}</style> 
+ </head>
+ <body> 
+  <div class="container"> 
+   <div class="row"> 
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
+     <div class="zchart" data-type="html"> 
+      <div class="zchart-head" style="display:none"> 
+       <div class="title">
+        首页导航
+       </div> 
+      </div> 
+      <!-- html --> 
+      <div class="zchart-body" style="overflow: auto;"> 
+       <nav class="navbar navbar-default"> 
+        <ul class="nav navbar-nav"> 
+         <li role="presentation"> <a href="/zone/index.html"> 首页 </a> </li> 
+         <li role="presentation" class="active"> <a href="/zone/chart/view/bus.html"> 秋名车神 </a> </li> 
+         <li role="presentation"> <a href="/zone/chart/view/xmkanshu.html"> 龙剑天尊 </a> </li> 
+         <li role="presentation"> <a href="/zone/chart/view/gushi.html"> 唐诗宋词 </a> </li> 
+         <li role="presentation"> <a href="/zone/chart/view/vsinger.html"> vsinger </a> </li> 
+        </ul> 
+       </nav> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="row"> 
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
+     <div class="zchart panel panel-default panel-success" data-type="bar" data-url="chart/view/bus/10_1.json"> 
+      <div class="zchart-head panel-heading"> 
+       <div class="title">
+        片子最近12个月数量
+       </div> 
+       <form class="zparams"> 
+       </form> 
+      </div> 
+      <!-- bar --> 
+      <div class="zchart-body panel-body" style="overflow: auto;height:400px"> 
+      </div> 
+      <script type="text/plain" data-options>options = {
+    fields: [{
+        field: "month",
+        value: "num"
+    }]
+}</script> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="row"> 
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
+     <div class="zchart panel panel-default panel-info" data-type="grid" data-url="chart/view/bus/3_1.json"> 
+      <div class="zchart-head panel-heading"> 
+       <div class="title">
+        最年轻的95后演员
+       </div> 
+       <form class="zparams"> 
+        <input type="hidden" name="page" value="1"> 
+        <input type="hidden" name="rows" value="10"> 
+       </form> 
+      </div> 
+      <!-- grid --> 
+      <div class="zchart-body panel-body" style="overflow: auto;;padding-right:5px"> 
+      </div> 
+      <script type="text/plain" data-options>options = {
+    fields: [{
+        field: "avatar",
+        formatter: function(value, row, index) {
+            return '<img src="' + value + '">';
+            //return '<a href="' + ctx + '/avbus?star=' + row.code + '" target="blank"><img src="' + value + '"></a>';
+        }
+    },
+    {
+        field: "name",
+        title: "姓名"
+    },
+    {
+        field: "birthday",
+        title: "生日"
+    },
+    {
+        field: "height",
+        title: "身高"
+    },
+    {
+        field: "cup",
+        title: "罩杯"
+    },
+    {
+        field: "bust",
+        title: "胸围"
+    },
+    {
+        field: "waistline",
+        title: "腰围"
+    },
+    {
+        field: "hipline",
+        title: "臀围"
+    },
+    {
+        field: "city",
+        title: "出生地"
+    },
+    {
+        field: "interest",
+        title: "爱好"
+    }],
+    waterfall: true,
+    gridBoxStyle: "width:147px",
+    pagination: true,
+    pageSize: 30
+}</script> 
+     </div> 
+    </div> 
+   </div> 
+  </div>   
+ </body>
+</html>
